@@ -1,0 +1,53 @@
+.inputBox {
+    position: relative;
+    margin-bottom: 35px;
+}
+
+.inputBox.s50 {
+    width: 47%;
+}
+
+.inputBox.s100 {
+    width: 100%;
+}
+
+.inputBox input,
+.inputBox textarea {
+    width: 100%;
+    resize: none;
+    padding: 5px 0;
+    font-size: 18px;
+    font-weight: 300;
+    outline: none;
+    background-color: transparent;
+}
+
+.inputBox textarea {
+    height: 120px;
+}
+
+.inputBox span {
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    pointer-events: none;
+    font-size: 18px;
+    font-weight: 300;
+    transition: 0.3s;
+}
+
+.inputBox input:focus ~ span,
+.inputBox input:valid ~ span,
+.inputBox textarea:focus ~ span,
+.inputBox textarea:valid ~ span {
+    transform: translateY(-20px);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 960px) {
+    .inputBox.s50 {
+        width: 100%;
+    }
+}

@@ -1,0 +1,14 @@
+.container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 1200px;
+    min-height: 100vh;
+    margin: 0 auto;
+}
+
+@media (max-width: 1200px) {
+    .container {
+        width: 100%;
+    }
+}

@@ -1,0 +1,68 @@
+button {
+    position: relative;
+    background: var(--glass);
+    width: 200px;
+    height: 60px;
+    border: none;
+    font-size: 1em;
+    border-radius: 4px;
+    transition: 1s;
+    cursor: pointer;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button::before {
+    content: '';
+    top: 0;
+    left: 0;
+    position: absolute;
+    background: rgba(255,255,255,0.8);
+    width: 60px;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    filter: blur(30px);
+    transform: translateX(-100px)  skewX(-15deg);
+}
+
+button:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 30px;
+    width: 30px;
+    height: 100%;
+    background: rgba(255,255,255,0.6);
+    opacity: 0;
+    visibility: hidden;
+    filter: blur(5px);
+    transform: translateX(-100px) skewX(-15deg);
+}
+
+button:hover {
+    color: var(--font-wt);
+    overflow: hidden;
+}
+
+button:hover:before,
+button:hover:after {
+    transform: translateX(300px) skewX(-15deg);  
+    opacity: 0.5;
+    transition: 1s;
+    visibility: visible;
+}
+
+button.send {
+    font-weight: 500;
+}
+
+button svg {
+    font-size: 2.2em;
+}
+
+a {
+    text-decoration: none;
+}

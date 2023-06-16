@@ -1,0 +1,43 @@
+.btn-exit-menu {
+    position: absolute;
+    top: 40px;
+    right: 100px;
+    width: 50px;
+    height: 50px;
+    transition: 0.5s;
+    transform: rotate(-45deg);
+    cursor: pointer;
+    z-index: 50;
+}
+
+.btn-exit-menu::before,
+.color-bg-set-x::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 25px;
+    width: 3px;
+    height: 55px;
+}
+
+.btn-exit-menu::after,
+.color-bg-set-x::after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 15px;
+    width: 3px;
+    height: 55px;
+    transform: rotate(90deg);
+}
+
+.btn-exit-menu:hover {
+    transform: rotate(45deg);
+}
+
+@media (max-width: 720px)  {
+    .btn-exit-menu {
+        top: 20px;
+        right: 30px;
+    }
+}

@@ -1,0 +1,58 @@
+.avatar {
+    width: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.picture {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid #fff;
+}
+
+.picture .me {
+    position: absolute;
+    top: -4px;
+    width: 250px;
+    z-index: 10;
+}
+
+.eyes {
+    position: relative;
+    top: -5px;
+    display: flex;
+}
+
+.eyes .eye {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    display: block;
+    background: #fff;
+    margin: 0 12px;
+    border-radius: 50%;
+}
+
+.eyes .eye::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 25px;
+    transform: translate(-50%, -50%);
+    background: #333;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+@media (max-width: 540px)  {
+    .avatar {
+        transform: scale(0.9);
+    }
+}

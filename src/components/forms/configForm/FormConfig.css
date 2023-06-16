@@ -1,0 +1,146 @@
+.config {
+    position: fixed;
+    top: 40vh;
+    right: -190px;
+    width: 250px;
+    height: 140px;
+    background: transparent;
+    display: flex;
+    transition: 1s;
+    z-index: 60;
+}
+
+.config.accessUp {
+    right: 0;
+}
+
+.config .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    padding: 5px 10px;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.config .icon svg {
+    color: #ff4138;
+    font-size: 3em;
+    animation: rotation 3s linear infinite, colors 3s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotateZ(0deg)
+    }
+    100% {
+        transform: rotateZ(360deg)
+    }
+}
+
+@keyframes colors {
+    0% {
+        filter: hue-rotate(0deg)
+    }
+    100% {
+        filter: hue-rotate(360deg)
+    }
+}
+
+.config .colorBx {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    width: 190px;
+    background: var(--glass);
+    border-radius: 10px;
+}
+
+.config .colorBx h3 {
+    width: 190px;
+    height: 30px;
+    text-align: center;
+    line-height: 40px;
+    margin: 5px 0;
+}
+
+.config .colorBx .colors {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 160px;
+    height: 90px;
+}
+
+.config .colorBx .colors .blue,
+.config .colorBx .colors .green,
+.config .colorBx .colors .orange,
+.config .colorBx .colors .purple,
+.config .colorBx .colors .red,
+.config .colorBx .colors .yellow {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+    border: 1px solid #000;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.config .colorBx .colors .blue {
+    background: var(--blue);
+}
+
+.config .colorBx .colors .green {
+    background: var(--green);
+}
+
+.config .colorBx .colors .orange {
+    background: var(--orange);
+}
+
+.config .colorBx .colors .purple {
+    background: var(--purple);
+}
+
+.config .colorBx .colors .red {
+    background: var(--red);
+}
+
+.config .colorBx .colors .yellow {
+    background: var(--yellow);
+}
+
+@media (max-width: 540px) {
+    .config {
+        top: 20vh;
+        right: -40px;
+        width: 100px;
+        height: 250px;
+    }
+    
+    .config .colorBx {
+        width: 40px;
+        height: 480px;
+        justify-content: flex-end;
+    }
+    
+    .config .colorBx h3 {
+        width: 190px;
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+        margin-bottom: 80px;
+        transform: rotate(-90deg);
+    }
+    
+    .config .colorBx .colors {
+        width: 50px;
+        height: 280px;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+}

@@ -1,0 +1,102 @@
+.job-card {
+    position: relative;
+    width: 320px;
+    height: 450px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px var(--shadow);
+}
+
+.job-card::before {
+    content: '';
+    position: absolute;
+    bottom: -175px;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.job-card:hover::before {
+    bottom: 0;
+}
+
+.job-card .job-poster {
+    position: relative;
+    overflow: hidden;
+}
+
+.job-card .job-poster img {
+    height: 450px;
+    transform: translate(-190px, -10px) scale(1.4);
+    transition: 0.5s;
+}
+
+.job-card:hover .job-poster img {
+    transform: translate(-190px, -60px) scale(1.4);
+    filter: blur(5px);
+}
+
+.job-card .job-details {
+    position: absolute;
+    bottom: -140px;
+    left: 0;
+    padding: 20px;
+    width: 100%;
+    z-index: 2;
+    transition: 0.5s;
+}
+
+.job-card:hover .job-details {
+    bottom: 40px;
+}
+
+.job-card .job-details h1 {
+    font-size: 2.8em;
+    color: var(--font-wt);
+    line-height: 0.5em;
+}
+
+/* CUSTONS CLASS */
+.job-card.left .job-poster img {
+    height: 450px;
+    transform: translate(-20px, -110px) scale(1.4);
+    transition: 0.5s;
+}
+
+.job-card.left:hover .job-poster img {
+    transform: translate(-20px, -160px) scale(1.4);
+    filter: blur(5px);
+}
+
+.job-card.center-1 .job-poster img {
+    height: 450px;
+    transform: translate(-30px, 20px) scale(1.2);
+    transition: 0.5s;
+}
+
+.job-card.center-1:hover .job-poster img {
+    transform: translate(-30px, -30px) scale(1.2);
+    filter: blur(5px);
+}
+
+.job-card.center .job-poster img {
+    height: 450px;
+    transform: translate(0px, 0px) scale(1.1);
+    filter: grayscale(0.8);
+    transition: 0.5s;
+}
+
+.job-card.center:hover .job-poster img {
+    transform: translate(0px, -50px) scale(1.1);
+    filter: blur(5px) grayscale(0.8);
+    transition: 0.5s;
+}
+
+.job-card.center .job-details {
+    bottom: -70px;
+}
+
+.job-card.center:hover .job-details {
+    bottom: 30px;
+}

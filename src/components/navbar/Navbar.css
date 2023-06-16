@@ -1,0 +1,48 @@
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 100px;
+    background: transparent;
+    overflow: hidden;
+    z-index: 40;
+}
+
+.logo:hover {
+    transform: rotateZ(-30deg);
+}
+
+.dm-switch {
+    position: fixed;
+    margin-left: 100px;
+    z-index: 41;
+}
+
+.menu-button {
+    display: none;
+}
+
+@media (max-width: 1200px) {
+    .menu-button {
+        display: block;
+    }
+}
+
+@media (max-width: 720px) {
+    nav {
+        padding: 10px 30px;
+        background: transparent;
+        overflow: hidden;
+        z-index: 40;
+    }
+
+    .dm-switch {
+        position: relative;
+        margin-left: 0px;
+        z-index: 41;
+    }
+}

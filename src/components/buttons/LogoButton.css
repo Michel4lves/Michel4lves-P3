@@ -1,0 +1,6 @@
+.logo {
+    width: 50px;
+    transition: 0.5s;
+    cursor: pointer;
+    z-index: 50;
+}

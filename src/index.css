@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=B612+Mono:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'B612 Mono', monospace;
+}
+
+:root {
+    /* COLOR SET */
+    /* NORMAL */
+    --bg: #e2e0df;
+    --font-bl: #171717;
+    --font-wt: #e2e0df;
+    --glass: rgba(255, 255, 255, 0.2);
+    --glassMenu: rgba(255, 255, 255, 0.8);
+    --shadow: rgba(0, 0, 0, 0.5);
+    --bottom-ln: #171717;
+    --menu: #e2e0df;
+    
+    /* COLOR CONFIG */
+    --blue: #1f629e;
+    --green: #4ca913;
+    --orange: #ed991c;
+    --purple: #962c9f;
+    --red: #ab1f18;
+    --yellow: #e0d509;
+    
+    /* DARK MODE */
+    --bg-dm: #171717;
+    --font-dm: #f5f5f5;
+    --bottom-ln-dm: #f5f5f5;
+    --glassMenu-dm: rgba(40, 40, 40, 0.8);
+}
+
+html,
+body {
+    min-height: 100%;
+    user-select: none;
+    text-decoration: none;
+    background: var(--bg);
+    color: var(--font-bl);
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+
+/* COLOR SET */
+.color-font-set {
+    color: var(--blue);
+}
+
+.color-font-set-a:visited {
+    color: var(--blue);
+}
+
+.color-font-set-a:hover,
+.color-font-svg-set,
+.color-font-svg-set:visited,
+.color-font-set-btn {
+    color: var(--font-bl);
+}
+
+.color-font-svg-set:hover {
+    color: var(--blue);
+}
+
+.color-bg-set,
+.color-bg-set::before,
+.color-bg-set::after,
+.color-bg-set-x::before,
+.color-bg-set-x::after,
+.color-bg-set-btn:hover {
+    background: var(--blue);
+}
+
+.color-bg-set-gradient::before {
+    background: linear-gradient(0deg, var(--blue) 50%, transparent);
+}
+
+.color-bdr-1 {
+    border: 1px solid var(--blue);
+}
+
+.send,
+.color-bdr-2 {
+    border: 2px solid var(--blue);
+}
+
+.color-bdr-3 {
+    border: 3px solid var(--blue);
+}
+
+.color-bdr-bt-inp,
+.color-bdr-bt-txa {
+    border: none;
+    border-bottom: 1px solid var(--bottom-ln);
+}
+
+.active,
+.color-bdr-bt-inp:focus,
+.color-bdr-bt-inp:valid,
+.color-bdr-bt-txa:focus,
+.color-bdr-bt-txa:valid {
+    border-bottom: 2px solid var(--blue);
+}
+
+.color-bdr-bt-inp:focus ~ .placeholder,
+.color-bdr-bt-inp:valid ~ .placeholder,
+.color-bdr-bt-txa:focus ~ .placeholder,
+.color-bdr-bt-txa:valid ~ .placeholder {
+    color: var(--blue);
+}

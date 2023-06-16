@@ -1,0 +1,45 @@
+.menu-btn {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.menu-btn .first-bar,
+.menu-btn .second-bar,
+.menu-btn .third-bar {
+    position: relative;
+    width: 60px;
+    height: 3px;
+    background: transparent;
+    transform: rotate(180deg);
+    transition: 0.5s;
+}
+
+.menu-btn .first-bar::before,
+.menu-btn .second-bar::before,
+.menu-btn .third-bar::before {
+    content: '';
+    position: absolute;
+    width: 40%;
+    height: 3px;
+    transition: 0.5s;
+}
+
+.menu-btn .second-bar::before {
+    width: 60%;
+}
+
+.menu-btn .third-bar::before {
+    width: 100%;
+}
+
+.menu-btn:hover .first-bar::before,
+.menu-btn:hover .second-bar::before,
+.menu-btn:hover .third-bar::before {
+    width: 100%;
+}

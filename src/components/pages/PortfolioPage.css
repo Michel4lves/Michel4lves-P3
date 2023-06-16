@@ -1,0 +1,110 @@
+.portfolio-container {
+    margin-top: 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px 20px;
+    width: 100%;
+}
+
+.portfolio-container h1 {
+    font-size: 2.5em;
+    font-weight: bolt;
+    margin-top: 20px;
+}
+
+.portfolio-container h1 .me {
+    margin: 20px;
+}
+
+.portfolio-container .portBx {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    gap: 100px;
+    width: 100%;
+    margin-top: 1em;
+}
+
+.portfolio-container .portBx .port-menu {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 10px;
+    animation: scale-c 3s ease;
+}
+
+@keyframes scale-c {
+    0%{
+        transform-origin: left;
+        transform: scale(0.7);
+    }
+    100%{
+        transform-origin: left;
+        transform: scale(1);
+    }
+}
+
+.portfolio-container .portBx .port-jobs {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    animation: scale-d 3s ease;
+}
+
+@keyframes scale-d {
+    0%{
+        transform-origin: right;
+        transform: scale(0.7);
+    }
+    100%{
+        transform-origin: right;
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 1200px) {
+    .portfolio-container h1 {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 540px) {
+    .portfolio-container {
+        gap: 0px;
+        padding: 0px 20px;
+    }
+
+    .portfolio-container h1 {
+        font-size: 1.5em;
+    }
+
+    .portfolio-container .portBx .port-menu {
+        transform: scale(0.8);
+        animation: scale-e 3s ease;
+    }
+
+    .portfolio-container .portBx .port-jobs {
+        transform: scale(0.8);
+        margin-top: -150px;
+        animation: scale-e 3s ease;
+    }
+
+    @keyframes scale-e {
+        0%{
+            transform: scale(0.6);
+        }
+        100%{
+            transform: scale(0.8);
+        }
+    }
+}

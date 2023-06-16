@@ -1,0 +1,26 @@
+.transition {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+}
+
+.on-transition {
+    visibility: visible;
+    animation: transition 0.5s linear both;
+}
+
+@keyframes transition {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0) rotate(360deg);
+    }
+}

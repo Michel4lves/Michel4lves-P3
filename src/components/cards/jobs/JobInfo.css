@@ -1,0 +1,27 @@
+.job-info-text {
+    font-size: 1.1em;
+    color: var(--font-wt);
+    font-weight: 300;
+    line-height: 1.3em;
+}
+
+.job-info-text span {
+    font-size: 2em;
+    animation: coin 1s linear infinite;
+}
+
+.job-info-text span svg {
+    animation: coin 1s linear infinite;
+}
+
+@keyframes coin {
+    0% {
+        transform: rotateY(0deg);
+    }
+    50% {
+        transform: rotateY(90deg);
+    }
+    100% {
+        transform: rotateY(0deg);
+    }
+}

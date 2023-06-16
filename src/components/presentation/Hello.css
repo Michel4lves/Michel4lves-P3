@@ -1,0 +1,116 @@
+.presentation {
+    width: 600px;
+    height: 400px;
+    color: var(--font);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 10px;
+}
+
+.hello {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+}
+
+.hello h2,
+.hello span,
+.presentation h3 {
+    font-size: 1.8em;
+}
+
+.my-name {
+    font-family: 'B612 Mono', monospace;
+    font-size: 36px;
+    position: relative;
+    max-height: 40px;
+    color: var(--font);
+    font-weight: normal;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: textTyping 10s steps(12) infinite, flashes .7s infinite;
+}
+
+@keyframes textTyping {
+    0%, 90%, 100% {
+        width: 1px;
+    }
+    30%, 60% {
+        width: 280.8px;
+    }
+}
+
+@keyframes flashes {
+    0%, 100% {
+        box-shadow: 2px 0 0 var(--font);
+    }
+    50% {
+        box-shadow: 2px 0 0 var(--bg);
+    }
+}
+
+@media (max-width: 1200px) {
+    .hello h2,
+    .hello span,
+    .presentation h3 {
+        font-size: 1.6em;
+    }
+
+    .my-name {
+        font-size: 30px;
+    }
+
+    @keyframes textTyping {
+        0%, 90%, 100% {
+            width: 1px;
+        }
+        30%, 60% {
+            width: 234px;
+        }
+    }
+}
+
+@media (max-width: 960px) {
+    .presentation {
+        width: 600px;
+        height: 300px;
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 720px)  {
+    .presentation {
+        margin-left: 3em;
+        width: 320px;
+        height: 350px;
+    }
+
+    .hello h2,
+    .hello span,
+    .presentation h3 {
+        font-size: 1.4em;
+    }
+
+    .my-name {
+        font-size: 26px;
+    }
+
+    @keyframes textTyping {
+        0%, 90%, 100% {
+            width: 1px;
+        }
+        30%, 60% {
+            width: 202.81px;
+        }
+    }
+}
+
+@media (max-width: 540px) {
+    .presentation {
+        margin-top: 3em;
+        width: 310px;
+    }
+}
