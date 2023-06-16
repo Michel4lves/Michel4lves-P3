@@ -10,7 +10,7 @@ export default function LogoButton({ logoSrc, onActiveTransition }) {
 
     return (
         <>
-            <Link to="/" id="menuIntro" className={`${"menu-list"} ${"color-font-set-a"}`}  onClick={transition}>
+            <Link to="/Michel4lves-P3/" id="menuIntro" className={`${"menu-list"} ${"color-font-set-a"}`}  onClick={transition}>
                 <img className={`${"logo"} ${"color-set-logo"}`} src={logoSrc} alt="logo" id='logo'/>
             </Link>
         </>

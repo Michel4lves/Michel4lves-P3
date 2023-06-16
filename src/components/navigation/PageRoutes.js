@@ -12,10 +12,10 @@ import ContactPage from "../pages/ContactPage";
 export default function PageRoutes({ avatar })  {
     return (
         <Routes>
-            <Route path="/" element={<MainPage avatar={avatar} />} />
-            <Route path="/sobre" element={<AboutPage />} /> 
-            <Route path="/portfolio" element={<PortfolioPage />} /> 
-            <Route path="/contato" element={<ContactPage />} /> 
+            <Route path="/Michel4lves-P3/" element={<MainPage avatar={avatar} />} />
+            <Route path="/Michel4lves-P3/sobre" element={<AboutPage />} /> 
+            <Route path="/Michel4lves-P3/portfolio" element={<PortfolioPage />} /> 
+            <Route path="/Michel4lves-P3/contato" element={<ContactPage />} /> 
         </Routes>
     )
 }
