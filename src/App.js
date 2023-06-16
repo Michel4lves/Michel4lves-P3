@@ -48,7 +48,7 @@ export default function App() {
         setAvatarSrc(newAvatarSrc)
     }
 
-// fix: não funciona
+
     const txtColorIfYellow = (localConfigs.isYellow) ? "var(--font-bl)" : "var(--font-wt)"
 
     document.styleSheets[19].cssRules[8].style.color = txtColorIfYellow
@@ -85,11 +85,8 @@ export default function App() {
         })
     }
 
-    // console.log(document.styleSheets)
-
     
     const [isTransition, setIsTransition] = useState('')
-
     function activeTransition(activatedTransition) {
         setIsTransition(activatedTransition)
         setTimeout(() => {
