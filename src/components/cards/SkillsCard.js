@@ -1,17 +1,17 @@
 import './SkillsCard.css'
 import Skill from './skills/Skill'
 
-export default function SkillsCard() {
+export default function SkillsCard({ colorFontSet }) {
 
     return (
         <div className='skillBx'>
-            <Skill skillClass="Html" />
-            <Skill skillClass="Css" />
-            <Skill skillClass="Javascript" />
-            <Skill skillClass="React" />
-            <Skill skillClass="Jquery" />
-            <Skill skillClass="Git" />
-            <Skill skillClass="Python" />
+            <Skill colorFontSet={colorFontSet} skillClass="Html" />
+            <Skill colorFontSet={colorFontSet} skillClass="Css" />
+            <Skill colorFontSet={colorFontSet} skillClass="Javascript" />
+            <Skill colorFontSet={colorFontSet} skillClass="React" />
+            <Skill colorFontSet={colorFontSet} skillClass="Jquery" />
+            <Skill colorFontSet={colorFontSet} skillClass="Git" />
+            <Skill colorFontSet={colorFontSet} skillClass="Python" />
         </div>
     )
 }

@@ -3,16 +3,16 @@ import perfil from '../../img/perfil/perfil.png'
 import About from "../../components/presentation/About";
 import SkillsCard from '../../components/cards/SkillsCard';
 
-export default function AboutPage() {
+export default function AboutPage({ colorFontSet }) {
     return (
         <section className='about-container'>
-            <h1>Sobre<span className={`${"me"} ${"color-font-set"}`}>Mim</span></h1>
+            <h1>Sobre<span className={`${"me"} ${colorFontSet}`}>Mim</span></h1>
             <div className="aboutBx">
-                <About />
+                <About colorFontSet={colorFontSet} />
                 <img src={perfil} alt="perfil_photo"/>
             </div>
-            <h1><span className={`${"me"} ${"color-font-set"}`}>Minhas</span>Habilidades</h1>
-            <SkillsCard />
+            <h1><span className={`${"me"} ${colorFontSet}`}>Minhas</span>Habilidades</h1>
+            <SkillsCard colorFontSet={colorFontSet} />
         </section>
     )
 }

@@ -1,7 +1,7 @@
 import "./GlassButton.css"
 
-export default function GlassButton({ title, handleClick, activeClass }) {
+export default function GlassButton({ title, handleClick, activeClass, colorBgSet }) {
     return (
-        <button className={`${activeClass} ${"color-bg-set-btn"} ${"color-font-set-btn"}`} onClick={handleClick}>{title}</button>
+        <button className={`${"glass-button"} ${activeClass} ${colorBgSet} ${"color-font-set-btn"}`} onClick={handleClick}>{title}</button>
     )
 }

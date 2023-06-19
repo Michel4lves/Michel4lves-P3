@@ -1,5 +1,5 @@
 import './Transition.css'
 
-export default function Transition({ onTransition }) {
-    return <div className={`${"transition"} ${onTransition} ${"color-bg-set"}`}></div>
+export default function Transition({ onTransition, colorBgSet }) {
+    return <div className={`${"transition"} ${onTransition} ${colorBgSet}`}></div>
 }

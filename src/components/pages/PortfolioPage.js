@@ -13,7 +13,7 @@ import todo from '../../img/Jobs/todo.png'
 import breve from '../../img/Jobs/breve.png'
 
 
-export default function PortfolioPage() {
+export default function PortfolioPage({ colorFontSet, colorBgSet }) {
 
     const [groupJobs, setGroupJobs] = useState('Pessoais')
 
@@ -23,27 +23,27 @@ export default function PortfolioPage() {
 
     return (
         <section className='portfolio-container'>
-            <h1>Meu<span className={`${"me"} ${"color-font-set"}`}>Portfolio</span></h1>
+            <h1>Meu<span className={`${"me"} ${colorFontSet}`}>Portfolio</span></h1>
             <div className='portBx'>
                 <div className='port-menu'>
-                    <GlassButton title="Acadêmicos" handleClick={showJobs} activeClass={(groupJobs === 'Acadêmicos') ? 'active' : ''} />
-                    <GlassButton title="Pessoais" handleClick={showJobs} activeClass={(groupJobs === 'Pessoais') ? 'active' : ''} />
-                    <GlassButton title="Profissionais" handleClick={showJobs} activeClass={(groupJobs === 'Profissionais') ? 'active' : ''} />
-                    <GitHubAccessButton title="Veja mais no " />
+                    <GlassButton title="Acadêmicos" handleClick={showJobs} activeClass={(groupJobs === 'Acadêmicos') ? 'active' : ''} colorBgSet={colorBgSet} />
+                    <GlassButton title="Pessoais" handleClick={showJobs} activeClass={(groupJobs === 'Pessoais') ? 'active' : ''} colorBgSet={colorBgSet} />
+                    <GlassButton title="Profissionais" handleClick={showJobs} activeClass={(groupJobs === 'Profissionais') ? 'active' : ''} colorBgSet={colorBgSet} />
+                    <GitHubAccessButton title="Veja mais no " colorBgSet={colorBgSet} />
                 </div>
                 <div className='port-jobs'>
                     {(groupJobs === 'Acadêmicos') ?
                         <>
-                            <JobCard jobName="Budget" photo={budget} />
+                            <JobCard jobName="Budget" photo={budget} colorBgSet={colorBgSet} />
                         </> : null}
                     {(groupJobs === 'Pessoais') ? 
                         <>
-                            <JobCard jobName="Page Game" photo={page_game} custonClass='left' />
-                            <JobCard jobName="ToDo" photo={todo} custonClass='center-1' />
+                            <JobCard jobName="Page Game" photo={page_game} custonClass='left' colorBgSet={colorBgSet} />
+                            <JobCard jobName="ToDo" photo={todo} custonClass='center-1' colorBgSet={colorBgSet} />
                         </> : null}
                     {(groupJobs === 'Profissionais') ? 
                         <>
-                            <JobCard jobName="Em Breve" photo={breve} custonClass='center' />
+                            <JobCard jobName="Em Breve" photo={breve} custonClass='center' colorBgSet={colorBgSet} />
                         </> : null}
                 </div>
             </div>

@@ -1,3 +1,5 @@
+import "./components/configs/configColors.css"
+
 import { BrowserRouter } from "react-router-dom"
 import { useState } from "react";
 
@@ -14,27 +16,37 @@ import meBl from './img/avatar/eu-az.png'
 
 export default function App() {
 
-    const config = {"color": "var(--blue)", "logoSrc": "logoBl", "avatarSrc": "meBl", "darkMode": false, "isYellow": false}
+    const config = {
+        "logoSrc": "logoBl",
+        "avatarSrc": "meBl",
+        "colorFont": "fontBlue",
+        "colorBg": "bgBlue",
+        "colorBorder": "borderBlue",
+        "colorHover": "hoverBlue",
+        "darkMode": false,
+        "isYellow": false
+    }
 
     if (!localStorage.hasOwnProperty('configs')) {
         localStorage.setItem('configs', JSON.stringify(config))
     }
-
-    if (!localStorage.hasOwnProperty('configs')) {
-        const localConfigs = JSON.parse(localStorage.getItem('configs'))
-        document.styleSheets[1].cssRules[4].style.color = localConfigs.color
-        document.styleSheets[1].cssRules[5].style.color = localConfigs.color
-        document.styleSheets[1].cssRules[7].style.color = localConfigs.color
-        document.styleSheets[1].cssRules[8].style.background = localConfigs.color
-        document.styleSheets[1].cssRules[9].style.background = `linear-gradient(0deg, ${localConfigs.color} 50%, transparent)`
-        document.styleSheets[1].cssRules[10].style.border = `1px solid ${localConfigs.color}`
-        document.styleSheets[1].cssRules[11].style.border = `2px solid ${localConfigs.color}`
-        document.styleSheets[1].cssRules[12].style.border = `3px solid ${localConfigs.color}`
-        document.styleSheets[1].cssRules[14].style.borderBottom = `2px solid ${localConfigs.color}`
-        document.styleSheets[1].cssRules[15].style.color = localConfigs.color
-    }
     
     const localConfigs = JSON.parse(localStorage.getItem('configs'))
+
+    // if (!localStorage.hasOwnProperty('configs')) {
+    //     const localConfigs = JSON.parse(localStorage.getItem('configs'))
+        // document.styleSheets[1].cssRules[4].style.color = localConfigs.color
+        // document.styleSheets[1].cssRules[5].style.color = localConfigs.color
+        // document.styleSheets[1].cssRules[7].style.color = localConfigs.color
+        // document.styleSheets[1].cssRules[8].style.background = localConfigs.color
+        // document.styleSheets[1].cssRules[9].style.background = `linear-gradient(0deg, ${localConfigs.color} 50%, transparent)`
+        // document.styleSheets[1].cssRules[10].style.border = `1px solid ${localConfigs.color}`
+        // document.styleSheets[1].cssRules[11].style.border = `2px solid ${localConfigs.color}`
+        // document.styleSheets[1].cssRules[12].style.border = `3px solid ${localConfigs.color}`
+        // document.styleSheets[1].cssRules[14].style.borderBottom = `2px solid ${localConfigs.color}`
+        // document.styleSheets[1].cssRules[15].style.color = localConfigs.color
+    // }
+    
     
     const initialLogo = (localConfigs.logoSrc !== "logoBl") ? localConfigs.logoSrc : logoBl
     const [logoSrc, setLogoSrc] = useState(initialLogo)
@@ -48,31 +60,55 @@ export default function App() {
         setAvatarSrc(newAvatarSrc)
     }
 
-
-    const txtColorIfYellow = (localConfigs.isYellow) ? "var(--font-bl)" : "var(--font-wt)"
-
-    document.styleSheets[19].cssRules[8].style.color = txtColorIfYellow
-    document.styleSheets[20].cssRules[0].style.color = txtColorIfYellow
-    document.styleSheets[20].cssRules[2].style.color = txtColorIfYellow
-    document.styleSheets[21].cssRules[3].style.color = txtColorIfYellow
-
-
-    const page = document.querySelector('body')
-    if (localConfigs.darkMode) {
-        page.style.background = 'var(--bg-dm)'
-        page.style.color = 'var(--font-dm)'
-        document.styleSheets[1].cssRules[6].style.color = 'var(--font-dm)'
-        document.styleSheets[1].cssRules[13].style.borderBottom = '1px solid var(--bottom-ln-dm)'
-        document.styleSheets[6].cssRules[9].cssRules[0].style.background = 'var(--bg-dm)'
-        document.styleSheets[24].cssRules[3].style.color = 'var(--font-dm)'
-    }else{
-        page.style.background = 'var(--bg)'
-        page.style.color = 'var(--font-bl)'
-        document.styleSheets[1].cssRules[6].style.color = 'var(--font-bl)'
-        document.styleSheets[1].cssRules[13].style.borderBottom = '1px solid var(--bottom-ln)'
-        document.styleSheets[6].cssRules[9].cssRules[0].style.background = 'var(--bg)'
-        document.styleSheets[24].cssRules[3].style.color = 'var(--font-bl)'
+    const initialColorFont = localConfigs.colorFont
+    const [colorFont, setColorFont] = useState(initialColorFont)
+    function handleColorFontChange(newColorFont) {
+        setColorFont(newColorFont)
     }
+
+    const initialColorBg = localConfigs.colorBg
+    const [colorBg, setColorBg] = useState(initialColorBg)
+    function handleColorBgChange(newColorBg) {
+        setColorBg(newColorBg)
+    }
+
+    const initialColorBorder = localConfigs.colorBorder
+    const [colorBorder, setColorBorder] = useState(initialColorBorder)
+    function handleColorBorderChange(newColorBorder) {
+        setColorBorder(newColorBorder)
+    }
+
+    const initialColorHover = localConfigs.colorHover
+    const [colorHover, setColorHover] = useState(initialColorHover)
+    function handleColorHoverChange(newColorHover) {
+        setColorHover(newColorHover)
+    }
+
+
+    // const txtColorIfYellow = (localConfigs.isYellow) ? "var(--font-bl)" : "var(--font-wt)"
+
+    // document.styleSheets[19].cssRules[8].style.color = txtColorIfYellow
+    // document.styleSheets[20].cssRules[0].style.color = txtColorIfYellow
+    // document.styleSheets[20].cssRules[2].style.color = txtColorIfYellow
+    // document.styleSheets[21].cssRules[3].style.color = txtColorIfYellow
+
+
+    // const page = document.querySelector('body')
+    // if (localConfigs.darkMode) {
+    //     page.style.background = 'var(--bg-dm)'
+    //     page.style.color = 'var(--font-dm)'
+        // document.styleSheets[1].cssRules[6].style.color = 'var(--font-dm)'
+        // document.styleSheets[1].cssRules[13].style.borderBottom = '1px solid var(--bottom-ln-dm)'
+        // document.styleSheets[6].cssRules[9].cssRules[0].style.background = 'var(--bg-dm)'
+        // document.styleSheets[24].cssRules[3].style.color = 'var(--font-dm)'
+    // }else{
+    //     page.style.background = 'var(--bg)'
+    //     page.style.color = 'var(--font-bl)'
+        // document.styleSheets[1].cssRules[6].style.color = 'var(--font-bl)'
+        // document.styleSheets[1].cssRules[13].style.borderBottom = '1px solid var(--bottom-ln)'
+        // document.styleSheets[6].cssRules[9].cssRules[0].style.background = 'var(--bg)'
+        // document.styleSheets[24].cssRules[3].style.color = 'var(--font-bl)'
+    // }
 
     function eyeBall(event) {
         var eye = document.querySelectorAll('.eye');
@@ -98,13 +134,33 @@ export default function App() {
     return (
         <div className="App" onMouseMove={eyeBall}>
             <BrowserRouter>
-                <Navbar logoSrc={logoSrc} activeTransition={activeTransition} />
+                <Navbar 
+                    logoSrc={logoSrc} 
+                    activeTransition={activeTransition}
+                    colorFontSet={colorFont} 
+                    colorBgSet={colorBg} 
+                    colorBorderSet={colorBorder} 
+                    colorHoverSet={colorHover} 
+                />
                 <Container>
-                    <Scroll />
-                    <PageRoutes avatar={avatarSrc} />
-                    <FormConfig onLogoChange={handleLogoChange} onAvatarChange={handleAvatarChange} />
+                    <Scroll colorBgSet={colorBg} />
+                    <PageRoutes 
+                        avatar={avatarSrc} 
+                        colorFontSet={colorFont} 
+                        colorBgSet={colorBg} 
+                        colorBorderSet={colorBorder} 
+                        colorHoverSet={colorHover} 
+                    />
+                    <FormConfig 
+                        onLogoChange={handleLogoChange} 
+                        onAvatarChange={handleAvatarChange} 
+                        onColorFontChange={handleColorFontChange} 
+                        onColorBgChange={handleColorBgChange} 
+                        onColorBorderChange={handleColorBorderChange} 
+                        onColorHoverChange={handleColorHoverChange} 
+                    />
                 </Container>
-                <Transition onTransition={isTransition} logoSrc={logoSrc} />
+                <Transition onTransition={isTransition} colorBgSet={colorBg} />
             </BrowserRouter>
         </div>
     );

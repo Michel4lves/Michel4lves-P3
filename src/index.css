@@ -50,7 +50,7 @@ body {
 
 
 /* COLOR SET */
-.color-font-set {
+/* .color-font-set {
     color: var(--blue);
 }
 
@@ -114,4 +114,4 @@ body {
 .color-bdr-bt-txa:focus ~ .placeholder,
 .color-bdr-bt-txa:valid ~ .placeholder {
     color: var(--blue);
-}
+} */

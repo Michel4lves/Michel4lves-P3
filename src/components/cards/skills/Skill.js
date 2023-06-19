@@ -4,24 +4,24 @@ import { DiHtml5, DiCss3, DiJsBadge, DiReact, DiPython, DiJqueryLogo, DiGit } fr
 import SkillKnowledge from './SkillKnowledge'
 import GradientDiPython from './GradientDiPython'
 
-export default function Skill({ skillClass }) {
+export default function Skill({ skillClass, colorFontSet }) {
     
     const skillType = () => {
         switch (skillClass) {
             case 'Html':
-                return <DiHtml5 className={`${"skill-logo"} ${"color-font-set"}`}/>
+                return <DiHtml5 className={`${"skill-logo"} ${colorFontSet}`}/>
             case 'Css':
-                return <DiCss3 className={`${"skill-logo"} ${"color-font-set"}`}/>
+                return <DiCss3 className={`${"skill-logo"} ${colorFontSet}`}/>
             case 'Javascript':
-                return <DiJsBadge className={`${"skill-logo"} ${"color-font-set"}`}/>
+                return <DiJsBadge className={`${"skill-logo"} ${colorFontSet}`}/>
             case 'React':
-                return <DiReact className={`${"skill-logo"} ${"color-font-set"}`}/>
+                return <DiReact className={`${"skill-logo"} ${colorFontSet}`}/>
             case 'Jquery':
-                return <DiJqueryLogo className={`${"skill-logo"} ${"color-font-set"}`}/>
+                return <DiJqueryLogo className={`${"skill-logo"} ${colorFontSet}`}/>
             case 'Git':
-                return <DiGit className={`${"skill-logo"} ${"color-font-set"}`}/>
+                return <DiGit className={`${"skill-logo"} ${colorFontSet}`}/>
             case 'Python':
-                return <DiPython className={`${"skill-logo"} ${"color-font-set"}`}/>
+                return <DiPython className={`${"skill-logo"} ${colorFontSet}`}/>
             default:
                 return "";
         }
@@ -64,8 +64,8 @@ export default function Skill({ skillClass }) {
                         <>{skillTypeColor()}</>     {/* <DiHtml5 className={`${"skill-logo-hover"} ${skillClass}`}/> */}
                     </div>
                     <div className="skill-content">
-                        <>{skillType()}</>     {/* <DiHtml5 className={`${"skill-logo"} ${"color-set"}`}/> */}
-                        <h3 id={skillClass} className='color-font-set'>{skillClass}</h3>
+                        <>{skillType()}</>     {/* <DiHtml5 className={`${"skill-logo"} ${colorFontSet}`}/> */}
+                        <h3 id={skillClass} className={colorFontSet}>{skillClass}</h3>Font
                         <SkillKnowledge skillName={skillClass} />
                     </div>
                 </div>

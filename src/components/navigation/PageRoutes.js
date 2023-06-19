@@ -9,13 +9,40 @@ import ContactPage from "../pages/ContactPage";
 
 
 
-export default function PageRoutes({ avatar })  {
+export default function PageRoutes({ avatar, colorFontSet, colorBgSet, colorBorderSet, colorHoverSet })  {
     return (
         <Routes>
-            <Route path="/michel4lves-p3/" element={<MainPage avatar={avatar} />} />
-            <Route path="/michel4lves-p3/sobre" element={<AboutPage />} /> 
-            <Route path="/michel4lves-p3/portfolio" element={<PortfolioPage />} /> 
-            <Route path="/michel4lves-p3/contato" element={<ContactPage />} /> 
+            <Route 
+                path="/michel4lves-p3/" 
+                element={<MainPage 
+                            avatar={avatar} 
+                            colorFontSet={colorFontSet} 
+                            colorBorderSet={colorBorderSet}
+                            colorHoverSet={colorHoverSet}
+                        />} 
+            />
+            <Route 
+                path="/michel4lves-p3/sobre" 
+                element={<AboutPage 
+                            colorFontSet={colorFontSet} 
+                        />} 
+            /> 
+            <Route 
+                path="/michel4lves-p3/portfolio" 
+                element={<PortfolioPage 
+                            colorFontSet={colorFontSet} 
+                            colorBgSet={colorBgSet} 
+                            colorBorderSet={colorBorderSet} 
+                        />} 
+            /> 
+            <Route 
+                path="/michel4lves-p3/contato" 
+                element={<ContactPage 
+                            colorFontSet={colorFontSet} 
+                            colorBgSet={colorBgSet} 
+                            colorBorderSet={colorBorderSet} 
+                        />} 
+            /> 
         </Routes>
     )
 }

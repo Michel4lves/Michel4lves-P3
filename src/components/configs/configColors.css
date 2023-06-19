@@ -1,0 +1,351 @@
+/* COLORS */
+
+/*blue*/
+
+.exit-icon.fontBlue,
+.imput.borderBlue:focus ~ .placeholder,
+.imput.borderBlue:valid ~ .placeholder,
+.imput-txa.borderBlue:focus ~ .placeholder,
+.imput-txa.borderBlue:valid ~ .placeholder,
+.social-svg:hover.hoverBlue,
+.fontBlue { 
+    color: var(--blue);
+}
+
+.progressBar.bgBlue,
+.transition.bgBlue,
+.first-bar.bgBlue::before,
+.second-bar.bgBlue::before,
+.third-bar.bgBlue::before,
+.send:hover.bgBlue,
+.glass-button:hover.bgBlue,
+.git-button:hover.bgBlue,
+.dark.bgBlue,
+.light.bgBlue,
+.light-part.bgBlue {
+    background-color: var(--blue);
+}
+
+.job-card.bgBlue::before {
+    background: linear-gradient(0deg, var(--blue) 50%, transparent);
+}
+
+.light.borderBlue  {
+    border: 1px solid var(--blue);
+}
+
+.send.bgBlue,
+.contactForm.borderBlue {
+    border: 2px solid var(--blue);
+}
+
+.active.bgBlue,
+.imput.borderBlue:focus,
+.imput.borderBlue:valid,
+.imput-txa.borderBlue:focus,
+.imput-txa.borderBlue:valid {
+    border-bottom: 2px solid var(--blue);
+}
+
+.theme.borderBlue,
+.avatar.borderBlue {
+    border: 3px solid var(--blue);
+}
+
+/*green*/
+
+.exit-icon.fontGreen,
+.imput.borderGreen:focus ~ .placeholder,
+.imput.borderGreen:valid ~ .placeholder,
+.imput-txa.borderGreen:focus ~ .placeholder,
+.imput-txa.borderGreen:valid ~ .placeholder,
+.social-svg:hover.hoverGreen,
+.fontGreen { 
+    color: var(--green);
+}
+
+.progressBar.bgGreen,
+.transition.bgGreen,
+.first-bar.bgGreen::before,
+.second-bar.bgGreen::before,
+.third-bar.bgGreen::before,
+.send:hover.bgGreen,
+.glass-button:hover.bgGreen,
+.git-button:hover.bgGreen,
+.dark.bgGreen,
+.light.bgGreen,
+.light-part.bgGreen {
+    background-color: var(--green);
+}
+
+.job-card.bgGreen::before {
+    background: linear-gradient(0deg, var(--green) 50%, transparent);
+}
+
+.light.borderGreen  {
+    border: 1px solid var(--green);
+}
+
+.send.bgGreen,
+.contactForm.borderGreen {
+    border: 2px solid var(--green);
+}
+
+.active.bgGreen,
+.imput.borderGreen:focus,
+.imput.borderGreen:valid,
+.imput-txa.borderGreen:focus,
+.imput-txa.borderGreen:valid {
+    border-bottom: 2px solid var(--green);
+}
+
+.theme.borderGreen,
+.avatar.borderGreen {
+    border: 3px solid var(--green);
+}
+
+/*orange*/
+
+.exit-icon.fontOrange,
+.imput.borderOrange:focus ~ .placeholder,
+.imput.borderOrange:valid ~ .placeholder,
+.imput-txa.borderOrange:focus ~ .placeholder,
+.imput-txa.borderOrange:valid ~ .placeholder,
+.social-svg:hover.hoverOrange,
+.fontOrange { 
+    color: var(--orange);
+}
+
+.progressBar.bgOrange,
+.transition.bgOrange,
+.first-bar.bgOrange::before,
+.second-bar.bgOrange::before,
+.third-bar.bgOrange::before,
+.send:hover.bgOrange,
+.glass-button:hover.bgOrange,
+.git-button:hover.bgOrange,
+.dark.bgOrange,
+.light.bgOrange,
+.light-part.bgOrange {
+    background-color: var(--orange);
+}
+
+.job-card.bgOrange::before {
+    background: linear-gradient(0deg, var(--orange) 50%, transparent);
+}
+
+.light.borderOrange  {
+    border: 1px solid var(--orange);
+}
+
+.send.bgOrange,
+.contactForm.borderOrange {
+    border: 2px solid var(--orange);
+}
+
+.active.bgOrange,
+.imput.borderOrange:focus,
+.imput.borderOrange:valid,
+.imput-txa.borderOrange:focus,
+.imput-txa.borderOrange:valid {
+    border-bottom: 2px solid var(--orange);
+}
+
+.theme.borderOrange,
+.avatar.borderOrange {
+    border: 3px solid var(--orange);
+}
+
+/*purple*/
+
+.exit-icon.fontPurple,
+.imput.borderPurple:focus ~ .placeholder,
+.imput.borderPurple:valid ~ .placeholder,
+.imput-txa.borderPurple:focus ~ .placeholder,
+.imput-txa.borderPurple:valid ~ .placeholder,
+.social-svg:hover.hoverPurple,
+.fontPurple { 
+    color: var(--purple);
+}
+
+.progressBar.bgPurple,
+.transition.bgPurple,
+.first-bar.bgPurple::before,
+.second-bar.bgPurple::before,
+.third-bar.bgPurple::before,
+.send:hover.bgPurple,
+.glass-button:hover.bgPurple,
+.git-button:hover.bgPurple,
+.dark.bgPurple,
+.light.bgPurple,
+.light-part.bgPurple {
+    background-color: var(--purple);
+}
+
+.job-card.bgPurple::before {
+    background: linear-gradient(0deg, var(--purple) 50%, transparent);
+}
+
+.light.borderPurple  {
+    border: 1px solid var(--purple);
+}
+
+.send.bgPurple,
+.contactForm.borderPurple {
+    border: 2px solid var(--purple);
+}
+
+.active.bgPurple,
+.imput.borderPurple:focus,
+.imput.borderPurple:valid,
+.imput-txa.borderPurple:focus,
+.imput-txa.borderPurple:valid {
+    border-bottom: 2px solid var(--purple);
+}
+
+.theme.borderPurple,
+.avatar.borderPurple {
+    border: 3px solid var(--purple);
+}
+
+/*red*/
+
+.exit-icon.fontRed,
+.imput.borderRed:focus ~ .placeholder,
+.imput.borderRed:valid ~ .placeholder,
+.imput-txa.borderRed:focus ~ .placeholder,
+.imput-txa.borderRed:valid ~ .placeholder,
+.social-svg:hover.hoverRed,
+.fontRed { 
+    color: var(--red);
+}
+
+.progressBar.bgRed,
+.transition.bgRed,
+.first-bar.bgRed::before,
+.second-bar.bgRed::before,
+.third-bar.bgRed::before,
+.send:hover.bgRed,
+.glass-button:hover.bgRed,
+.git-button:hover.bgRed,
+.dark.bgRed,
+.light.bgRed,
+.light-part.bgRed {
+    background-color: var(--red);
+}
+
+.job-card.bgRed::before {
+    background: linear-gradient(0deg, var(--red) 50%, transparent);
+}
+
+.light.borderRed  {
+    border: 1px solid var(--red);
+}
+
+.send.bgRed,
+.contactForm.borderRed {
+    border: 2px solid var(--red);
+}
+
+.active.bgRed,
+.imput.borderRed:focus,
+.imput.borderRed:valid,
+.imput-txa.borderRed:focus,
+.imput-txa.borderRed:valid {
+    border-bottom: 2px solid var(--red);
+}
+
+.theme.borderRed,
+.avatar.borderRed {
+    border: 3px solid var(--red);
+}
+
+/*yellow*/
+
+.exit-icon.fontYellow,
+.imput.borderYellow:focus ~ .placeholder,
+.imput.borderYellow:valid ~ .placeholder,
+.imput-txa.borderYellow:focus ~ .placeholder,
+.imput-txa.borderYellow:valid ~ .placeholder,
+.social-svg:hover.hoverYellow,
+.fontYellow { 
+    color: var(--yellow);
+}
+
+.progressBar.bgYellow,
+.transition.bgYellow,
+.first-bar.bgYellow::before,
+.second-bar.bgYellow::before,
+.third-bar.bgYellow::before,
+.send:hover.bgYellow,
+.glass-button:hover.bgYellow,
+.git-button:hover.bgYellow,
+.dark.bgYellow,
+.light.bgYellow,
+.light-part.bgYellow {
+    background-color: var(--yellow);
+}
+
+.job-card.bgYellow::before {
+    background: linear-gradient(0deg, var(--yellow) 50%, transparent);
+}
+
+.light.borderYellow  {
+    border: 1px solid var(--yellow);
+}
+
+.send.bgYellow,
+.contactForm.borderYellow {
+    border: 2px solid var(--yellow);
+}
+
+.active.bgYellow,
+.imput.borderYellow:focus,
+.imput.borderYellow:valid,
+.imput-txa.borderYellow:focus,
+.imput-txa.borderYellow:valid {
+    border-bottom: 2px solid var(--yellow);
+}
+
+.theme.borderYellow,
+.avatar.borderYellow {
+    border: 3px solid var(--yellow);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.social-svg,
+.menu-list:hover {
+    color: var(--font-bl);
+}
+
+.imput.contact,
+.imput-txa.contact {
+    border: none;
+    border-bottom: 1px solid var(--bottom-ln);
+}

@@ -7,7 +7,7 @@ import DarkModeSwitch from '../switches/DarkModeSwitch'
 import { useState } from 'react'
 
 
-export default function Navbar({ logoSrc, activeTransition }) {
+export default function Navbar({ logoSrc, activeTransition, colorFontSet, colorBgSet, colorBorderSet, colorHoverSet }) {
 
     const [isActive, setIsActive] = useState(false)
     const [activeClass, setActiveClass] = useState('')
@@ -31,16 +31,31 @@ export default function Navbar({ logoSrc, activeTransition }) {
     return (
         <nav>
             <div className='logo'>
-                <LogoButton logoSrc={logoSrc} onActiveTransition={activeTransition} />
+                <LogoButton 
+                    logoSrc={logoSrc} 
+                    onActiveTransition={activeTransition} 
+                />
             </div>
             <div className='dm-switch'>
-                <DarkModeSwitch />
+                <DarkModeSwitch 
+                    colorBgSet={colorBgSet} 
+                    colorBorderSet={colorBorderSet} 
+                />
             </div>
             <div>
-                <NavMenu activeClass={activeClass} onCloseMenu={noActive} onActiveTransition={activeTransition} />
+                <NavMenu 
+                    activeClass={activeClass} 
+                    onCloseMenu={noActive} 
+                    onActiveTransition={activeTransition} 
+                    colorFontSet={colorFontSet}
+                    
+                />
             </div>
             <div className='menu-button' onClick={menuToggle}>
-                {isActive ? <ExitButton /> : <NavButton />}
+                {isActive ? 
+                    <ExitButton colorFontSet={colorFontSet} /> : 
+                    <NavButton colorBgSet={colorBgSet} />
+                }
             </div>
         </nav>
     )
