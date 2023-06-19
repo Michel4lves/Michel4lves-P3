@@ -7,7 +7,7 @@ import DarkModeSwitch from '../switches/DarkModeSwitch'
 import { useState } from 'react'
 
 
-export default function Navbar({ logoSrc, activeTransition, colorFontSet, colorBgSet, colorBorderSet, colorHoverSet }) {
+export default function Navbar({ logoSrc, activeTransition, colorFontSet, colorBgSet, colorBorderSet, onDarkMode, themeModeSet }) {
 
     const [isActive, setIsActive] = useState(false)
     const [activeClass, setActiveClass] = useState('')
@@ -40,6 +40,7 @@ export default function Navbar({ logoSrc, activeTransition, colorFontSet, colorB
                 <DarkModeSwitch 
                     colorBgSet={colorBgSet} 
                     colorBorderSet={colorBorderSet} 
+                    onDarkMode={onDarkMode}
                 />
             </div>
             <div>
@@ -48,7 +49,7 @@ export default function Navbar({ logoSrc, activeTransition, colorFontSet, colorB
                     onCloseMenu={noActive} 
                     onActiveTransition={activeTransition} 
                     colorFontSet={colorFontSet}
-                    
+                    themeModeSet={themeModeSet}
                 />
             </div>
             <div className='menu-button' onClick={menuToggle}>

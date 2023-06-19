@@ -6,10 +6,7 @@ import PortfolioPage from "../pages/PortfolioPage";
 import ContactPage from "../pages/ContactPage";
 
 
-
-
-
-export default function PageRoutes({ avatar, colorFontSet, colorBgSet, colorBorderSet, colorHoverSet })  {
+export default function PageRoutes({ avatar, colorFontSet, colorBgSet, colorBorderSet, colorHoverSet, themeModeSet })  {
     return (
         <Routes>
             <Route 
@@ -19,12 +16,14 @@ export default function PageRoutes({ avatar, colorFontSet, colorBgSet, colorBord
                             colorFontSet={colorFontSet} 
                             colorBorderSet={colorBorderSet}
                             colorHoverSet={colorHoverSet}
+                            themeModeSet={themeModeSet}
                         />} 
             />
             <Route 
                 path="/michel4lves-p3/sobre" 
                 element={<AboutPage 
                             colorFontSet={colorFontSet} 
+                            themeModeSet={themeModeSet}
                         />} 
             /> 
             <Route 
@@ -33,6 +32,7 @@ export default function PageRoutes({ avatar, colorFontSet, colorBgSet, colorBord
                             colorFontSet={colorFontSet} 
                             colorBgSet={colorBgSet} 
                             colorBorderSet={colorBorderSet} 
+                            themeModeSet={themeModeSet}
                         />} 
             /> 
             <Route 
@@ -41,6 +41,7 @@ export default function PageRoutes({ avatar, colorFontSet, colorBgSet, colorBord
                             colorFontSet={colorFontSet} 
                             colorBgSet={colorBgSet} 
                             colorBorderSet={colorBorderSet} 
+                            themeModeSet={themeModeSet}
                         />} 
             /> 
         </Routes>

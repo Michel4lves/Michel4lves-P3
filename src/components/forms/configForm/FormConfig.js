@@ -18,10 +18,15 @@ import meRd from '../../../img/avatar/eu-vm.png'
 import meYe from '../../../img/avatar/eu-am.png'
 
 
+export default function FormConfig({ 
+    onLogoChange, 
+    onAvatarChange, 
+    onColorFontChange, 
+    onColorBgChange, 
+    onColorBorderChange, 
+    onColorHoverChange 
+}) {
 
-
-
-export default function FormConfig({ onLogoChange, onAvatarChange, onColorFontChange, onColorBgChange, onColorBorderChange, onColorHoverChange }) {
     const localConfigs = JSON.parse(localStorage.getItem('configs'))
     
     const [configActive, setConfigActive] = useState(false)
@@ -33,7 +38,6 @@ export default function FormConfig({ onLogoChange, onAvatarChange, onColorFontCh
     const [colorHover, setColorHover] = useState(localConfigs.colorHover)
 
     const [isYellow, setIsYellow] = useState(localConfigs.isYellow)
-    const [secondaryFont, setSecondaryFont] = useState('var(--font-wt)')
     
     function menuConfigToggle() {
         setConfigActive(!configActive)
@@ -58,7 +62,6 @@ export default function FormConfig({ onLogoChange, onAvatarChange, onColorFontCh
                 onColorHoverChange('hoverBlue')
                 
                 setIsYellow(false)
-                setSecondaryFont('var(--font-wt)')
                 break
             case 'green':
                 setLogo(logoGr)
@@ -75,7 +78,6 @@ export default function FormConfig({ onLogoChange, onAvatarChange, onColorFontCh
                 onColorHoverChange('hoverGreen')
 
                 setIsYellow(false)
-                setSecondaryFont('var(--font-wt)')
             break
             case 'orange':
                 setLogo(logoOr)
@@ -92,7 +94,6 @@ export default function FormConfig({ onLogoChange, onAvatarChange, onColorFontCh
                 onColorHoverChange('hoverOrange')
 
                 setIsYellow(false)
-                setSecondaryFont('var(--font-wt)')
                 break
             case 'purple':
                 setLogo(logoPu)
@@ -108,7 +109,6 @@ export default function FormConfig({ onLogoChange, onAvatarChange, onColorFontCh
                 onColorBorderChange('borderPurple')
                 onColorHoverChange('hoverPurple')
                 setIsYellow(false)
-                setSecondaryFont('var(--font-wt)')
                 break
             case 'red':
                 setLogo(logoRd)
@@ -125,7 +125,7 @@ export default function FormConfig({ onLogoChange, onAvatarChange, onColorFontCh
                 onColorHoverChange('hoverRed')
 
                 setIsYellow(false)
-                setSecondaryFont('var(--font-wt)')
+                // setSecondaryFont('var(--font-wt)')
                 break
             case 'yellow':
                 setLogo(logoYe)
@@ -142,7 +142,7 @@ export default function FormConfig({ onLogoChange, onAvatarChange, onColorFontCh
                 onColorHoverChange('hoverYellow')
 
                 setIsYellow(true)
-                setSecondaryFont('var(--font-bl)')
+                // setSecondaryFont('var(--font-bl)')
                 break
             default:
                 return ''

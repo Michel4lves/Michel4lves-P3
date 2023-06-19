@@ -30,24 +30,9 @@ export default function App() {
     if (!localStorage.hasOwnProperty('configs')) {
         localStorage.setItem('configs', JSON.stringify(config))
     }
-    
+
     const localConfigs = JSON.parse(localStorage.getItem('configs'))
 
-    // if (!localStorage.hasOwnProperty('configs')) {
-    //     const localConfigs = JSON.parse(localStorage.getItem('configs'))
-        // document.styleSheets[1].cssRules[4].style.color = localConfigs.color
-        // document.styleSheets[1].cssRules[5].style.color = localConfigs.color
-        // document.styleSheets[1].cssRules[7].style.color = localConfigs.color
-        // document.styleSheets[1].cssRules[8].style.background = localConfigs.color
-        // document.styleSheets[1].cssRules[9].style.background = `linear-gradient(0deg, ${localConfigs.color} 50%, transparent)`
-        // document.styleSheets[1].cssRules[10].style.border = `1px solid ${localConfigs.color}`
-        // document.styleSheets[1].cssRules[11].style.border = `2px solid ${localConfigs.color}`
-        // document.styleSheets[1].cssRules[12].style.border = `3px solid ${localConfigs.color}`
-        // document.styleSheets[1].cssRules[14].style.borderBottom = `2px solid ${localConfigs.color}`
-        // document.styleSheets[1].cssRules[15].style.color = localConfigs.color
-    // }
-    
-    
     const initialLogo = (localConfigs.logoSrc !== "logoBl") ? localConfigs.logoSrc : logoBl
     const [logoSrc, setLogoSrc] = useState(initialLogo)
     function handleLogoChange(newLogoSrc) {
@@ -84,31 +69,13 @@ export default function App() {
         setColorHover(newColorHover)
     }
 
+    const initialThemeMode = localConfigs.darkMode ? "dark" : ""
+    const [themeMode, setThemeMode] = useState(initialThemeMode)
+    function handleDarkModeChange(newthemeMode) {
+        setThemeMode(newthemeMode)
+    }
+    console.log(themeMode)
 
-    // const txtColorIfYellow = (localConfigs.isYellow) ? "var(--font-bl)" : "var(--font-wt)"
-
-    // document.styleSheets[19].cssRules[8].style.color = txtColorIfYellow
-    // document.styleSheets[20].cssRules[0].style.color = txtColorIfYellow
-    // document.styleSheets[20].cssRules[2].style.color = txtColorIfYellow
-    // document.styleSheets[21].cssRules[3].style.color = txtColorIfYellow
-
-
-    // const page = document.querySelector('body')
-    // if (localConfigs.darkMode) {
-    //     page.style.background = 'var(--bg-dm)'
-    //     page.style.color = 'var(--font-dm)'
-        // document.styleSheets[1].cssRules[6].style.color = 'var(--font-dm)'
-        // document.styleSheets[1].cssRules[13].style.borderBottom = '1px solid var(--bottom-ln-dm)'
-        // document.styleSheets[6].cssRules[9].cssRules[0].style.background = 'var(--bg-dm)'
-        // document.styleSheets[24].cssRules[3].style.color = 'var(--font-dm)'
-    // }else{
-    //     page.style.background = 'var(--bg)'
-    //     page.style.color = 'var(--font-bl)'
-        // document.styleSheets[1].cssRules[6].style.color = 'var(--font-bl)'
-        // document.styleSheets[1].cssRules[13].style.borderBottom = '1px solid var(--bottom-ln)'
-        // document.styleSheets[6].cssRules[9].cssRules[0].style.background = 'var(--bg)'
-        // document.styleSheets[24].cssRules[3].style.color = 'var(--font-bl)'
-    // }
 
     function eyeBall(event) {
         var eye = document.querySelectorAll('.eye');
@@ -121,7 +88,7 @@ export default function App() {
         })
     }
 
-    
+
     const [isTransition, setIsTransition] = useState('')
     function activeTransition(activatedTransition) {
         setIsTransition(activatedTransition)
@@ -132,7 +99,7 @@ export default function App() {
 
 
     return (
-        <div className="App" onMouseMove={eyeBall}>
+        <div className={`${"App"} ${themeMode}`} onMouseMove={eyeBall}>
             <BrowserRouter>
                 <Navbar 
                     logoSrc={logoSrc} 
@@ -140,7 +107,8 @@ export default function App() {
                     colorFontSet={colorFont} 
                     colorBgSet={colorBg} 
                     colorBorderSet={colorBorder} 
-                    colorHoverSet={colorHover} 
+                    onDarkMode={handleDarkModeChange}
+                    themeModeSet={themeMode}
                 />
                 <Container>
                     <Scroll colorBgSet={colorBg} />
@@ -150,6 +118,7 @@ export default function App() {
                         colorBgSet={colorBg} 
                         colorBorderSet={colorBorder} 
                         colorHoverSet={colorHover} 
+                        themeModeSet={themeMode}
                     />
                     <FormConfig 
                         onLogoChange={handleLogoChange} 

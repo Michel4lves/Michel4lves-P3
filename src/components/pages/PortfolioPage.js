@@ -13,7 +13,7 @@ import todo from '../../img/Jobs/todo.png'
 import breve from '../../img/Jobs/breve.png'
 
 
-export default function PortfolioPage({ colorFontSet, colorBgSet }) {
+export default function PortfolioPage({ colorFontSet, colorBgSet, themeModeSet }) {
 
     const [groupJobs, setGroupJobs] = useState('Pessoais')
 
@@ -26,10 +26,10 @@ export default function PortfolioPage({ colorFontSet, colorBgSet }) {
             <h1>Meu<span className={`${"me"} ${colorFontSet}`}>Portfolio</span></h1>
             <div className='portBx'>
                 <div className='port-menu'>
-                    <GlassButton title="Acadêmicos" handleClick={showJobs} activeClass={(groupJobs === 'Acadêmicos') ? 'active' : ''} colorBgSet={colorBgSet} />
-                    <GlassButton title="Pessoais" handleClick={showJobs} activeClass={(groupJobs === 'Pessoais') ? 'active' : ''} colorBgSet={colorBgSet} />
-                    <GlassButton title="Profissionais" handleClick={showJobs} activeClass={(groupJobs === 'Profissionais') ? 'active' : ''} colorBgSet={colorBgSet} />
-                    <GitHubAccessButton title="Veja mais no " colorBgSet={colorBgSet} />
+                    <GlassButton title="Acadêmicos" handleClick={showJobs} activeClass={(groupJobs === 'Acadêmicos') ? 'active' : ''} colorBgSet={colorBgSet} themeModeSet={themeModeSet} />
+                    <GlassButton title="Pessoais" handleClick={showJobs} activeClass={(groupJobs === 'Pessoais') ? 'active' : ''} colorBgSet={colorBgSet} themeModeSet={themeModeSet} />
+                    <GlassButton title="Profissionais" handleClick={showJobs} activeClass={(groupJobs === 'Profissionais') ? 'active' : ''} colorBgSet={colorBgSet} themeModeSet={themeModeSet} />
+                    <GitHubAccessButton title="Veja mais no " colorBgSet={colorBgSet} themeModeSet={themeModeSet} />
                 </div>
                 <div className='port-jobs'>
                     {(groupJobs === 'Acadêmicos') ?

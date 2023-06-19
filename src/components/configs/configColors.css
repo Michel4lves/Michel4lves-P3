@@ -313,31 +313,7 @@
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* OTHERS */
 
 .social-svg,
 .menu-list:hover {
@@ -348,4 +324,34 @@
 .imput-txa.contact {
     border: none;
     border-bottom: 1px solid var(--bottom-ln);
+}
+
+
+/* DARK MODE */
+
+.App.dark {
+    color: var(--font-dm);
+    background-color: var(--bg-dm);
+}
+
+.social-svg.dark,
+.menu-list.dark:hover {
+    color: var(--font-dm);
+}
+
+.menuActive.dark {
+    background-color: var(--bg-dm);
+}
+
+.git-button.dark,
+.glass-button.dark {
+    color: var(--font-dm);
+    background: var(--glass);
+}
+
+.imput.dark,
+.imput-txa.dark {
+    border: none;
+    border-bottom: 1px solid var(--bottom-ln-dm);
+    color: var(--font-dm);
 }
