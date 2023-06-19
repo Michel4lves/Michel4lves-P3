@@ -74,7 +74,6 @@ export default function App() {
     function handleDarkModeChange(newthemeMode) {
         setThemeMode(newthemeMode)
     }
-    console.log(themeMode)
 
 
     function eyeBall(event) {
