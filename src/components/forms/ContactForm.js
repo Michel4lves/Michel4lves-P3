@@ -15,11 +15,11 @@ export default function ContactForm({ colorBgSet, colorBorderSet, themeModeSet }
     function submit(e) {
         // e.preventDefault()
         setTitle('Obrigado!')
-        setName('');
-        setEmail('');
-        setSubject('');
-        setMessage('');
         setTimeout(() => {
+            setName('');
+            setEmail('');
+            setSubject('');
+            setMessage('');
             setTitle('Enviar')
         }, 2000)
     }
