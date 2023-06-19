@@ -34,12 +34,18 @@ export default function PortfolioPage({ colorFontSet, colorBgSet, themeModeSet }
                 <div className='port-jobs'>
                     {(groupJobs === 'Acadêmicos') ?
                         <>
-                            <JobCard jobName="Budget" photo={budget} colorBgSet={colorBgSet} />
+                            <a href="https://michel4lves.github.io/budget/" target="_blank" rel="noopener noreferrer">
+                                <JobCard jobName="Budget" photo={budget} colorBgSet={colorBgSet} />
+                            </a>
                         </> : null}
                     {(groupJobs === 'Pessoais') ? 
                         <>
-                            <JobCard jobName="Page Game" photo={page_game} custonClass='left' colorBgSet={colorBgSet} />
-                            <JobCard jobName="ToDo" photo={todo} custonClass='center-1' colorBgSet={colorBgSet} />
+                            <a href="https://michel4lves.github.io/Personal_Page_Game/" target="_blank" rel="noopener noreferrer">
+                                <JobCard jobName="Page Game" photo={page_game} custonClass='left' colorBgSet={colorBgSet} />
+                            </a>
+                            <a href="https://michel4lves.github.io/Front_ToDo/" target="_blank" rel="noopener noreferrer">
+                                <JobCard jobName="ToDo" photo={todo} custonClass='center-1' colorBgSet={colorBgSet} />
+                            </a>
                         </> : null}
                     {(groupJobs === 'Profissionais') ? 
                         <>
