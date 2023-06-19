@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/michel4lves-p3/static/css/main.263b51d8.css",
-    "main.js": "/michel4lves-p3/static/js/main.f14789b1.js",
+    "main.js": "/michel4lves-p3/static/js/main.23d189b4.js",
     "static/media/page_game.png": "/michel4lves-p3/static/media/page_game.b0f23b262a156a96fc39.png",
     "static/media/eu-vd.png": "/michel4lves-p3/static/media/eu-vd.5c86a237c341f0a5efe4.png",
     "static/media/eu-la.png": "/michel4lves-p3/static/media/eu-la.918775254e79c29e5335.png",
@@ -15,10 +15,10 @@
     "static/media/budget.png": "/michel4lves-p3/static/media/budget.71e0ffc19d573a404a22.png",
     "index.html": "/michel4lves-p3/index.html",
     "main.263b51d8.css.map": "/michel4lves-p3/static/css/main.263b51d8.css.map",
-    "main.f14789b1.js.map": "/michel4lves-p3/static/js/main.f14789b1.js.map"
+    "main.23d189b4.js.map": "/michel4lves-p3/static/js/main.23d189b4.js.map"
   },
   "entrypoints": [
     "static/css/main.263b51d8.css",
-    "static/js/main.f14789b1.js"
+    "static/js/main.23d189b4.js"
   ]
 }
