@@ -65,7 +65,7 @@ export default function Skill({ skillClass, colorFontSet }) {
                     </div>
                     <div className="skill-content">
                         <>{skillType()}</>     {/* <DiHtml5 className={`${"skill-logo"} ${colorFontSet}`}/> */}
-                        <h3 id={skillClass} className={colorFontSet}>{skillClass}</h3>Font
+                        <h3 id={skillClass} className={colorFontSet}>{skillClass}</h3>
                         <SkillKnowledge skillName={skillClass} />
                     </div>
                 </div>
