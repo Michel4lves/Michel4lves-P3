@@ -11,6 +11,8 @@ export default function JobInfo({ jobInfo }) {
                 return <p className="job-info-text"><span><DiHtml5/> <DiCss3/> <DiJsBadge/></span><br/><br/>Página To Do List para praticar conhecimentos de front end.<br/><br/>Responsivo: Sim</p>
             case 'Budget':
                 return <p className="job-info-text"><span><DiHtml5/> <DiCss3/> <DiReact/></span><br/><br/>Página de orçamento feita no curso de React com adições pessoais.<br/><br/>Responsivo: Sim</p>
+            case 'Videoteca':
+                return <p className="job-info-text"><span><DiHtml5/> <DiCss3/> <DiReact/></span><br/><br/>Página de filmes feita em React/Vite utilizando api do TMDB.<br/><br/>Responsivo: Sim</p>
             case 'Em Breve':
                 return <p className="job-info-text">Coloque seu projeto aqui!<br/><br/>Tem uma ideia? Vamos fazer juntos!</p>
             

@@ -6,6 +6,7 @@ import GlassButton from '../../components/buttons/GlassButton';
 import GitHubAccessButton from '../buttons/GitHubAccessButton';
 
 import budget from '../../img/Jobs/budget.png'
+import videoteca from '../../img/Jobs/videoteca.png'
 
 import page_game from '../../img/Jobs/page_game.png'
 import todo from '../../img/Jobs/todo.png'
@@ -36,6 +37,9 @@ export default function PortfolioPage({ colorFontSet, colorBgSet, themeModeSet }
                         <>
                             <a href="https://michel4lves.github.io/budget/" target="_blank" rel="noopener noreferrer">
                                 <JobCard jobName="Budget" photo={budget} colorBgSet={colorBgSet} />
+                            </a>
+                            <a href="https://videoteca-mauve.vercel.app/" target="_blank" rel="noopener noreferrer">
+                                <JobCard jobName="Videoteca" photo={videoteca} custonClass='center-1' colorBgSet={colorBgSet} />
                             </a>
                         </> : null}
                     {(groupJobs === 'Pessoais') ? 
