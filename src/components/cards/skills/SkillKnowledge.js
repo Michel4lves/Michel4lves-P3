@@ -12,6 +12,8 @@ export default function SkillKnowledge({ skillName }) {
                 return <p className="skill-text">Minhas habilidades permitem-me criar funcionalidades complexas e interativas para sites e aplicações web, com código limpo e eficiente, com conhecimento em bibliotecas como jQuery e React, que me ajudam a estender as funcionalidades da linguagem.</p>
             case 'React':
                 return <p className="skill-text">Sou capaz de criar componentes reutilizáveis e organizados, para construir aplicações web interativas e de alto desempenho. Estou familiarizado com o uso de states e com roteamento usando React Router, permitindo a criação de aplicações de página única (SPA) com navegação suave e intuitiva.</p>
+            case 'Sass':
+                return <p className="skill-text">Meus conhecimentos em Sass tornam-me capaz de estilizar páginas com Css usando conceitos como .variáveis, alinhamento de seletores, herança e a utilização de mixins, funções e diretivas como imports e extends.</p>
             case 'Jquery':
                 return <p className="skill-text">Consigo utilizar seus recursos para criar efeitos visuais, como animações, transições suaves e efeitos especiais. Também sou capaz de manipular eventos, responder a cliques, toques e outras interações do usuário para criar experiências interativas e envolventes.</p>
             case 'Git':

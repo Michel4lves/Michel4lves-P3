@@ -1,6 +1,6 @@
 import './SkillColors.css'
 import Tilt from 'react-parallax-tilt'
-import { DiHtml5, DiCss3, DiJsBadge, DiReact, DiPython, DiJqueryLogo, DiGit } from "react-icons/di"
+import { DiHtml5, DiCss3, DiJsBadge, DiReact, DiPython, DiJqueryLogo, DiGit, DiSass } from "react-icons/di"
 import SkillKnowledge from './SkillKnowledge'
 import GradientDiPython from './GradientDiPython'
 
@@ -16,6 +16,8 @@ export default function Skill({ skillClass, colorFontSet }) {
                 return <DiJsBadge className={`${"skill-logo"} ${colorFontSet}`}/>
             case 'React':
                 return <DiReact className={`${"skill-logo"} ${colorFontSet}`}/>
+            case 'Sass':
+                return <DiSass className={`${"skill-logo"} ${colorFontSet}`}/>
             case 'Jquery':
                 return <DiJqueryLogo className={`${"skill-logo"} ${colorFontSet}`}/>
             case 'Git':
@@ -37,6 +39,8 @@ export default function Skill({ skillClass, colorFontSet }) {
                 return <DiJsBadge className={`${"skill-logo-hover"} ${skillClass}`}/>
             case 'React':
                 return <DiReact className={`${"skill-logo-hover"} ${skillClass}`}/>
+            case 'Sass':
+                return <DiSass className={`${"skill-logo-hover"} ${skillClass}`}/>
             case 'Jquery':
                 return <DiJqueryLogo className={`${"skill-logo-hover"} ${skillClass}`}/>
             case 'Git':

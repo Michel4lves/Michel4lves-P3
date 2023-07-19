@@ -83,7 +83,6 @@
 .job-card.center .job-poster img {
     height: 450px;
     transform: translate(0px, 0px) scale(1.1);
-    filter: grayscale(0.8);
     transition: 0.5s;
 }
 
@@ -94,7 +93,7 @@
 }
 
 .job-card.center .job-details {
-    bottom: -70px;
+    bottom: -160px;
 }
 
 .job-card.center:hover .job-details {

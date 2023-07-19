@@ -10,6 +10,7 @@ import videoteca from '../../img/Jobs/videoteca.png'
 
 import page_game from '../../img/Jobs/page_game.png'
 import todo from '../../img/Jobs/todo.png'
+import pizzaria from '../../img/Jobs/pizzaria.png'
 
 import breve from '../../img/Jobs/breve.png'
 
@@ -49,6 +50,9 @@ export default function PortfolioPage({ colorFontSet, colorBgSet, themeModeSet }
                             </a>
                             <a href="https://michel4lves.github.io/Front_ToDo/" target="_blank" rel="noopener noreferrer">
                                 <JobCard jobName="ToDo" photo={todo} custonClass='center-1' colorBgSet={colorBgSet} />
+                            </a>
+                            <a href="https://michel4lves.github.io/sabordapizza/" target="_blank" rel="noopener noreferrer">
+                                <JobCard jobName="Pizzaria" photo={pizzaria} custonClass='center' colorBgSet={colorBgSet} />
                             </a>
                         </> : null}
                     {(groupJobs === 'Profissionais') ? 
